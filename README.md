@@ -1,21 +1,14 @@
 # HackneyBugDemo
 
-**TODO: Add description**
+Try to demonstrate [this issue](https://github.com/benoitc/hackney/issues/643).
 
-## Installation
+The app starts up `:ranch` to accept incoming requests, and a number of fetchers that fetch from it.
+I've tried various timeout and other kinds of responses from `:ranch` and haven't yet nailed down what
+actually causes the pool to fill up.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `hackney_bug_demo` to your list of dependencies in `mix.exs`:
+To run the app:
 
-```elixir
-def deps do
-  [
-    {:hackney_bug_demo, "~> 0.1.0"}
-  ]
-end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/hackney_bug_demo](https://hexdocs.pm/hackney_bug_demo).
-
+$ mix deps.get
+$ mix run --no-halt
+```
